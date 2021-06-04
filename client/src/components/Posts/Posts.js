@@ -1,5 +1,4 @@
 import React from 'react';
-//to make post frontend
 import { Grid, CircularProgress } from '@material-ui/core';
 import Post from './Post/Post';
 import { useSelector } from 'react-redux';
@@ -7,7 +6,7 @@ import useStyles from './styles';
 
 //accept currentID as props
 const Posts = ({ setCurrentId }) => {
-    //we get posts from reducer exported posts
+    
     const posts = useSelector((state) => state.posts);
     const classes =useStyles();
 
