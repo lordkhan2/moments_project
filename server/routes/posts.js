@@ -1,9 +1,5 @@
 import express from 'express';
-
-//not default export so {}
 import { getPosts, createPost, updatePost, deletePost, likePost } from '../controllers/posts.js'
-
-//routes folder does not contain logic
 
 const router = express.Router();
 
@@ -11,11 +7,8 @@ const router = express.Router();
 
 router.get('/', getPosts);
 router.post('/', createPost);
-//patch used to update post
 router.patch('/:id', updatePost);
-
 router.delete('/:id', deletePost);
-//liking something is updating
 router.patch('/:id/likePost', likePost);
 
 
