@@ -15,19 +15,12 @@ dotenv.config();
 
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
-// app.use(express.json()); //Used to parse JSON bodies
-// app.use(express.urlencoded()); //Parse URL-encoded bodies
 app.use(cors())
-// alaways have app.use cors above postRoutes
 app.use('/posts', postRoutes);
-
 app.get('/', (req,res) => {
     res.send('hello')
 });
 
-//mongoDB connect
-//const CONNECTION_URL = 'mongodb+srv://farhan:farhankhan1@cluster0.crbvr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-// port for backend needs to changed for deployment at HEROKU, as HEROKU does this automatically
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology:true})
