@@ -24,6 +24,6 @@ const Posts = ({ setCurrentId }) => {
         )
      );
 }
-/* curley braces indicates js logic */
+
  
 export default Posts;
