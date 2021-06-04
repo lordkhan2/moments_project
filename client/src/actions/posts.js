@@ -37,7 +37,7 @@ export const updatePost = (id, post) => async (dispatch) => {
 
 export const deletePost = (id) => async (dispatch) => {
     try {
-        // no need of const {data} = //since we dont need response data
+        
         await api.deletePost(id);
 
         dispatch({ type: 'DELETE', payload: id});
@@ -56,16 +56,4 @@ export const likePost = (id) => async (dispatch) => {
     }
 };
 
-/*
-usually done
-const action ={type: 'FETCH_ALL', payload: []}
-return action;
-an action is an object
-since its async data we have to use async thunk
-to use redux thunk, const getPosts = () => async (dispatch) => {
-    const action= { type: 'FETCH_ALL', payload : data}
-    dispatch action
-}
-redux thunk doesnt use return, so we have to dispatch action
-therefore we directly dispatch({ type: 'FETCH_ALL', payload : data})
- */
+
