@@ -12,8 +12,7 @@ import useStyles from './styles';
 import { useDispatch } from 'react-redux';
 import { deletePost, likePost } from '../../../actions/posts'
 
-//desturcture post, to access various property 
-//{setCurrentId } received from posts
+
 const Post = ({post, setCurrentId}) => {
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -45,5 +44,4 @@ const Post = ({post, setCurrentId}) => {
 }
  
 export default Post;
-//moment fuction has .formnow says 5mins or sec etc ago
-//moment(post.createdAt).fromNow()
+
